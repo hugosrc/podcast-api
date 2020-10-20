@@ -11,4 +11,6 @@ beforeAll(async () => {
   global.testRequest = supertest(server.getApp());
 });
 
-// TODO: close server afterAll
+afterAll(async () => {
+  server.close();
+});
